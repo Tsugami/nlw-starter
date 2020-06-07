@@ -1,0 +1,15 @@
+{
+  "name": "nlw-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Tsugami/nlw-starter.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  }
+}
