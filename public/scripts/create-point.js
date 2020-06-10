@@ -51,6 +51,7 @@ for (const item of itemsToCollect) {
 }
 
 const selectedItems = [];
+const collectedItems =  document.querySelector("input[name=items]");
 function handleSelectItem(event) {
   const itemLi = event.target;
   const itemId = itemLi.dataset.id;
@@ -64,4 +65,6 @@ function handleSelectItem(event) {
   } else {
     selectedItems.push(itemId);
   }
+
+  collectedItems.value = selectedItems;
 }
