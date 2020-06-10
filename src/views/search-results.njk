@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 {% set pageId = "page-search-results" %}
 {% block title %}
   <title>Resultado da pesquisa</title>
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles/search-results.css">
 {% endblock styles %}
 {% block content %}
-  {% include "partials/header.html" %}
+  {% include "partials/header.njk" %}
   <main>
     <h4>
       <strong>

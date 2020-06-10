@@ -17,11 +17,11 @@ server.use(express.urlencoded({ extended: true }));
 server.use(cors());
 
 server.get("/", (req, res) => {
-  return res.render("index.html");
+  return res.render("index.njk");
 });
 
 server.get("/create-point", (req, res) => {
-  return res.render("create-point.html", { saved: false });
+  return res.render("create-point.njk", { saved: false });
 });
 
 server.post("/savepoint", (req, res) => {
@@ -60,7 +60,7 @@ server.post("/savepoint", (req, res) => {
       console.error(err);
       return res.send("Erro na cadastro!");
     }
-    return res.render("create-point.html", { saved: true })
+    return res.render("create-point.njk", { saved: true })
   })
 });
 
@@ -68,7 +68,7 @@ server.get("/search-results", (req, res) => {
   const {search} = req.query;
 
   const render = places => {
-    return res.render("search-results.html", { places, total: places.length });
+    return res.render("search-results.njk", { places, total: places.length });
   }
 
   if (!search) {
